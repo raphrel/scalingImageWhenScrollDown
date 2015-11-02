@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="scalingImageWhenScrollDown" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beverley" translatesAutoresizingMaskIntoConstraints="NO" id="MTv-am-PEy">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="294"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MTv-am-PEy" secondAttribute="height" multiplier="100:49" id="TqL-lq-2g4"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6OI-Kr-o4a">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBN-Lu-0C0">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIScrollViewStart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X05-Xo-yUD">
+                                                <rect key="frame" x="8" y="8" width="584" height="20.5"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIScrollViewEnd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="392-BF-Omi">
+                                                <rect key="frame" x="8" y="1171.5" width="584" height="20.5"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" red="1" green="0.93591099560000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="392-BF-Omi" secondAttribute="bottom" constant="8" id="7xA-SV-OUU"/>
+                                            <constraint firstAttribute="trailing" secondItem="X05-Xo-yUD" secondAttribute="trailing" constant="8" id="VGh-Ln-pNL"/>
+                                            <constraint firstItem="X05-Xo-yUD" firstAttribute="leading" secondItem="KBN-Lu-0C0" secondAttribute="leading" constant="8" id="aoU-Ar-2Da"/>
+                                            <constraint firstItem="392-BF-Omi" firstAttribute="leading" secondItem="KBN-Lu-0C0" secondAttribute="leading" constant="8" id="s3O-7S-8dC"/>
+                                            <constraint firstItem="X05-Xo-yUD" firstAttribute="top" secondItem="KBN-Lu-0C0" secondAttribute="top" constant="8" id="v0C-cX-dYe"/>
+                                            <constraint firstAttribute="trailing" secondItem="392-BF-Omi" secondAttribute="trailing" constant="8" id="zd4-JK-b7Y"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="KBN-Lu-0C0" firstAttribute="leading" secondItem="6OI-Kr-o4a" secondAttribute="leading" id="6Lb-kL-L7u"/>
+                                    <constraint firstItem="KBN-Lu-0C0" firstAttribute="top" secondItem="6OI-Kr-o4a" secondAttribute="top" id="E8o-48-0ok"/>
+                                    <constraint firstAttribute="trailing" secondItem="KBN-Lu-0C0" secondAttribute="trailing" id="GRi-tM-75O"/>
+                                    <constraint firstAttribute="bottom" secondItem="KBN-Lu-0C0" secondAttribute="bottom" id="TQo-zN-StF"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6OI-Kr-o4a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4m8-ht-SKQ"/>
+                            <constraint firstItem="MTv-am-PEy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4uG-x2-PMG"/>
+                            <constraint firstItem="6OI-Kr-o4a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ALo-WG-JoH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6OI-Kr-o4a" secondAttribute="bottom" id="MSK-GZ-fdg"/>
+                            <constraint firstItem="MTv-am-PEy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aOW-hL-dNs"/>
+                            <constraint firstItem="KBN-Lu-0C0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="bTt-zQ-ol1"/>
+                            <constraint firstItem="KBN-Lu-0C0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="2" id="d6F-Um-6C4"/>
+                            <constraint firstAttribute="trailing" secondItem="MTv-am-PEy" secondAttribute="trailing" id="fV9-sz-1pa"/>
+                            <constraint firstAttribute="trailing" secondItem="6OI-Kr-o4a" secondAttribute="trailing" id="zzC-f1-lrf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="MTv-am-PEy" id="3O2-YX-Nk4"/>
+                        <outlet property="scrollView" destination="6OI-Kr-o4a" id="Dk3-mK-u91"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="377" y="339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="beverley" width="2560" height="1600"/>
+    </resources>
+</document>
